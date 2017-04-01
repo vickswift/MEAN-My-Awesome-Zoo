@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <!-- <h1>Mongoose with Other Animals</h1> -->
+    <h1>My Awesome Zoo</h1>
+
+    <h2>Submitted Animal Information</h2>
+    <% for (var animal in animals) {%>
+  	<ul>
+      <li>Name: <strong><%= animals[animal].name %></strong></li>
+      <li>Description: <strong><%= animals[animal].description %></strong></li>
+      <li>
+        <a href="/animals/<%=animals[animal]._id %>">More Info</a> |
+        <a href="/animals/edit/<%=animals[animal]._id %>">Edit Info</a> |
+        <a href="/animals/destroy/<%=animals[animal]._id %>">Delete <%= animals[animal].name %></a>
+    </li>
+
+      </li>
+  	</ul>
+    <br>
+    <% } %>
+    <hr>
+
+  <a href="/animals/new"><button type="button" name="button">Create a Mongoose</button></a>
+    <hr>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Diplay more info</title>
+  </head>
+  <body>
+
+    <h2>More Information</h2>
+  	<ul>
+  		<li>Name: <strong><%= animal.name %></strong></li>
+      <li>Description: <strong><%= animal.description %></strong></li>
+      <li>Description: <strong><%= animal.color %></strong></li>
+
+  	</ul>
+
+    <a href="/animals/edit/<%=animal._id %>"><button type="button" name="button">Edit Info</button></a>
+    <a href="/animals/destroy/<%=animal._id %>"><button type="button" name="button">Delete <%= animal.name %></button></a>
+
+
+    <a href="/"><button type="button" name="button">Home</button></a>
+
+  </body>
+</html>
